@@ -1,0 +1,25 @@
+name: Hello World Workflow
+description: A simple workflow that prints "Hello, World!" to the console.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World!"
+        shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Goodbye World
+        run: echo "Goodbye, World!"
+        shell: bash
